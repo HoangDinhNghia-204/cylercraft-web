@@ -1,0 +1,78 @@
+.latest-post-card-minimal {
+    display: block;
+    background-color: #343434fc;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    border: 1px solid var(--card-border);
+}
+
+.post-image-minimal img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post-content-minimal {
+    background-color: #161616;
+    padding: 30px;
+}
+
+.post-content-minimal h3 {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    color: var(--text-color-heading);
+}
+
+.post-content-minimal .post-description-minimal {
+    font-size: 16px;
+    color: var(--text-color-light);
+    margin-bottom: 25px;
+}
+
+.post-footer-minimal {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #a0aec0;
+    font-weight: 500;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #2d3748;
+}
+
+/* Tìm và thay thế đoạn @media cũ */
+@media (max-width: 768px) {
+    .latest-post-card-dark {
+        grid-template-columns: 1fr;
+    }
+
+    .latest-post-image-dark img {
+        height: 250px;
+    }
+    
+    .post-header-dark {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .post-content-wrapper-dark {
+        padding: 20px;
+    }
+    
+    .post-title-dark {
+        font-size: 22px;
+    }
+}

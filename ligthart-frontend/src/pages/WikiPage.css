@@ -1,0 +1,172 @@
+/* --- GIAO DIỆN CHUNG CHO TRANG WIKI THEME TỐI --- */
+.wiki-page-dark-bg {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.page-header-dark {
+    padding: 60px 0;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+}
+.page-header-dark h1 { color: #fff; }
+.page-header-dark p { color: #aaa; }
+
+
+/* --- TRANG DANH SÁCH BÀI VIẾT --- */
+.wiki-page-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.wiki-sidebar-dark {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.wiki-sidebar-dark h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 15px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.wiki-category-list-dark { list-style: none; padding: 0; margin: 0; }
+.wiki-category-list-dark li {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #a0aec0;
+    transition: background-color 0.2s, color 0.2s;
+}
+.wiki-category-list-dark li:hover { background-color: rgba(255, 255, 255, 0.05); }
+.wiki-category-list-dark li.active {
+    background-color: #58a6ff;
+    color: #121212;
+    font-weight: 600;
+}
+
+.wiki-content-dark .category-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+    color: #fff;
+}
+
+.article-list-dark { display: flex; flex-direction: column; gap: 20px; }
+.article-item-dark {
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: transform 0.2s, border-color 0.2s;
+    color: inherit;
+    display: block;
+}
+.article-item-dark:hover {
+    transform: translateY(-5px);
+    border-color: #58a6ff;
+}
+.article-item-dark h4 { font-size: 20px; margin: 0 0 10px 0; color: #e0e0e0; }
+.article-item-dark p { margin: 0; color: #888; }
+
+
+/* --- TRANG CHI TIẾT BÀI VIẾT --- */
+.wiki-detail-container { padding: 60px 15px 80px; }
+.wiki-detail-content-dark {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    padding: 40px 50px;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.breadcrumb-dark { margin-bottom: 30px; font-size: 15px; color: #888; }
+.breadcrumb-dark a { color: #58a6ff; }
+.breadcrumb-dark a:hover { text-decoration: underline; }
+.wiki-detail-content-dark h1 { font-size: 36px; line-height: 1.3; margin: 0 0 15px 0; color: #fff; }
+.description-dark { font-size: 18px; color: #aaa; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid #333; font-style: italic; }
+.main-content-dark { font-size: 17px; line-height: 1.8; color: #ccc; }
+.main-content-dark p { margin-bottom: 1.5em; }
+.main-content-dark img { max-width: 100%; height: auto; border-radius: 8px; margin: 30px auto; display: block; }
+
+.wiki-category-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* LUÔN LUÔN 6 CỘT */
+    gap: 20px; /* Giảm gap một chút để vừa hơn */
+    max-width: 1200px; /* Tăng max-width để có không gian */
+    margin: 0 auto;
+}
+
+.wiki-category-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    min-height: 150px;
+}
+
+.wiki-category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-color: #58a6ff;
+}
+
+.wiki-category-card i {
+    font-size: 32px;
+    color: #58a6ff;
+}
+@media (max-width: 992px) {
+    /* Thêm các quy tắc responsive nếu cần */
+    .wiki-detail-content-dark {
+        padding: 25px;
+    }
+    .wiki-detail-content-dark h1 {
+        font-size: 32px;
+    }
+}
+@media (max-width: 992px) {
+    .wiki-page-layout {
+        grid-template-columns: 1fr;
+    }
+    .wiki-sidebar-dark {
+        position: static;
+        margin-bottom: 40px;
+    }
+    .wiki-category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+@media (max-width: 768px) {
+     .wiki-detail-content-dark {
+        padding: 25px;
+    }
+    .wiki-detail-content-dark h1 {
+        font-size: 32px;
+    }
+}

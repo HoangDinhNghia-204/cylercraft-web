@@ -1,0 +1,129 @@
+/* src/pages/UpdatePage.css */
+
+.update-page-container {
+    padding-bottom: 80px;
+}
+
+.featured-post {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 80px;
+    background-color: var(--card-border);
+    border-radius: 12px;
+}
+
+.featured-post-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px 0 0 12px;
+    margin-bottom: -1%;
+}
+
+.featured-post-content .category {
+    color: #3182ce;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.featured-post-content h2 {
+    font-size: 36px;
+    margin: 0 0 15px 0;
+}
+.featured-post-content .description {
+    font-size: 16px;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+.featured-post-content .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    color: #718096;
+}
+.featured-post-content .post-meta .author { font-weight: 600; }
+
+.more-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.update-post-card {
+    background-color: var(--card-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.update-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.post-image-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.post-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-content-wrapper { padding: 25px; }
+.post-title { font-size: 22px; font-weight: 700; margin: 0 0 10px 0; color: white; }
+.post-date { font-size: 14px; color: var(--accent-color-blue); margin-bottom: 15px; }
+.post-excerpt { color: lightgray; margin-bottom: 20px; }
+.read-more-btn { color: #3182ce; font-weight: 600; text-decoration: none; }
+
+/* --- BẮT ĐẦU ĐOẠN CODE RESPONSIVE --- */
+
+/* Cho máy tính bảng và các thiết bị nhỏ hơn (dưới 992px) */
+@media (max-width: 992px) {
+    .featured-post {
+        /* Chuyển layout grid thành 1 cột duy nhất */
+        grid-template-columns: 1fr;
+        gap: 0; /* Bỏ khoảng cách ngang, sẽ xử lý bằng padding */
+        margin-bottom: 60px;
+    }
+
+    .featured-post-image img {
+        height: 300px; /* Giảm chiều cao ảnh một chút */
+        /* Bo tròn 2 góc trên của ảnh thay vì chỉ bên trái */
+        border-radius: 12px 12px 0 0;
+    }
+
+    .featured-post-content {
+        /* Thêm padding cho nội dung vì giờ nó nằm dưới ảnh */
+        padding: 30px;
+    }
+}
+
+/* Cho điện thoại di động (dưới 768px) */
+@media (max-width: 768px) {
+    .featured-post-content h2 {
+        /* Giảm kích thước tiêu đề cho dễ đọc trên mobile */
+        font-size: 28px;
+    }
+
+    .featured-post-image img {
+        height: 250px; /* Giảm chiều cao ảnh thêm nữa */
+    }
+
+    /* Đảm bảo các bài viết còn lại cũng chỉ hiển thị 1 cột */
+    .more-posts-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}

@@ -1,0 +1,221 @@
+.update-detail-page {
+  padding: 60px 15px 80px;
+  background-color: #1e1e1e; /* Nền tối hơn một chút */
+  color: #e0e0e0;
+}
+
+.update-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px; /* Cột chính và sidebar 320px */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.update-article-column {
+  background-color: #171717;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.breadcrumb-dark {
+  margin-bottom: 30px;
+  font-size: 15px;
+  color: #888;
+}
+.breadcrumb-dark a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+.breadcrumb-dark a:hover {
+  text-decoration: underline;
+}
+
+.post-header-image-dark {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.update-article-column h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin: 0 0 15px 0;
+  color: #fff;
+}
+.post-meta-dark {
+  font-size: 15px;
+  color: #888;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333;
+}
+.post-meta-dark strong {
+  color: #e0e0e0;
+}
+
+.main-content-dark {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #ccc;
+}
+.main-content-dark p {
+  margin-bottom: 1.5em;
+}
+.main-content-dark h2 {
+  font-size: 28px;
+  color: #fff;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #e84118;
+  padding-bottom: 10px;
+}
+.main-content-dark h3 {
+  font-size: 22px;
+  color: #fff;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+.main-content-dark blockquote {
+  border-left: 4px solid #e84118;
+  padding-left: 20px;
+  margin: 2em 0;
+  color: #aaa;
+  font-style: italic;
+}
+.main-content-dark img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 30px auto;
+  display: block;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.update-sidebar-column {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+}
+
+.sidebar-widget {
+  background-color: #171717;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  margin-bottom: 30px;
+}
+.sidebar-widget h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 20px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.author-box {
+  text-align: center;
+}
+.author-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.author-box .author-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+.author-box .author-role {
+  font-size: 14px;
+  color: #e84118;
+}
+
+.recent-posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.recent-posts-list li {
+  margin-bottom: 15px;
+}
+.recent-posts-list a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+}
+.recent-posts-list img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.recent-posts-list .post-info .title {
+  font-weight: 600;
+  color: #e0e0e0;
+  transition: color 0.2s;
+}
+.recent-posts-list a:hover .post-info .title {
+  color: #e84118;
+}
+.recent-posts-list .post-info .date {
+  font-size: 13px;
+  color: #888;
+}
+
+.more-posts-section-dark {
+  margin-top: 80px;
+}
+.more-posts-section-dark h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #fff;
+}
+.recent-post-placeholder-img {
+  width: 60px;
+  height: 60px;
+  background-color: #333;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+@media (max-width: 992px) {
+  .update-detail-grid {
+      grid-template-columns: 1fr;
+  }
+  .update-sidebar-column {
+      position: static;
+      margin-top: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .update-detail-content-dark {
+      padding: 25px;
+  }
+  .update-detail-content-dark h1 {
+      font-size: 32px;
+  }
+}
+@media (max-width: 992px) {
+  .update-detail-grid {
+      grid-template-columns: 1fr;
+  }
+  .update-sidebar-column {
+      position: static;
+      margin-top: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .update-detail-content-dark {
+      padding: 25px;
+  }
+  .update-detail-content-dark h1 {
+      font-size: 32px;
+  }
+}

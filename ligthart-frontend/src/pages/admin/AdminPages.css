@@ -1,0 +1,196 @@
+/* src/pages/admin/AdminPages.css - PHIÊN BẢN NÂNG CẤP */
+
+.admin-page {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.admin-page h1{
+    color: black;
+}
+.admin-page p{
+    color: black;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.admin-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.admin-page-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: black;
+}
+
+.admin-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #0d6efd;
+    color: white !important;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.admin-button:hover {
+    background-color: #0b5ed7;
+}
+
+.admin-button:active {
+    transform: scale(0.98);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.admin-table th, .admin-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+    color: black;
+}
+
+.admin-table th {
+    background-color: #f8f9fa;
+    color: #495057;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-table tbody tr {
+    transition: background-color 0.15s ease-in-out;
+}
+.admin-table tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+.admin-table .actions {
+    display: flex;
+    gap: 10px;
+}
+.admin-button.edit {
+    background-color: #ffc107;
+    color: #1a1a1a !important;
+}
+.admin-button.edit:hover { background-color: #e0a800; }
+.admin-button.delete {
+    background-color: #dc3545;
+}
+.admin-button.delete:hover { background-color: #c82333; }
+.admin-button.small {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+.error-message {
+    color: #842029;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.admin-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    max-width: 800px;
+}
+
+.admin-form .form-group {
+    margin-bottom: 25px;
+}
+
+.admin-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #343a40;
+}
+
+.admin-form input[type="text"],
+.admin-form input[type="number"],
+.admin-form textarea,
+.admin-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus,
+.admin-form select:focus {
+    outline: none;
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.admin-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.admin-form .image-preview {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.admin-form .image-preview p {
+    margin: 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+.admin-form .image-preview img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+.form-group-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.form-group-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+.form-group-checkbox label {
+    margin: 0;
+}

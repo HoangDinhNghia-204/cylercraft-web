@@ -1,0 +1,11 @@
+.rich-text-editor .ql-toolbar {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #f8f9fa;
+}
+.rich-text-editor .ql-container {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    min-height: 250px;
+    font-size: 16px;
+}
