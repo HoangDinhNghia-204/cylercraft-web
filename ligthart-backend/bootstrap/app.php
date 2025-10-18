@@ -12,18 +12,17 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        // Thêm các middleware session vào đầu nhóm 'api'
+        // Thêm các middleware cần thiết vào đầu nhóm 'api'
         $middleware->api(prepend: [
             \Illuminate\Cookie\Middleware\EncryptCookies::class,
             \Illuminate\Session\Middleware\StartSession::class,
+            \Illuminate\Http\Middleware\HandleCors::class, // Sử dụng middleware có sẵn của Laravel
         ]);
 
         // Đăng ký middleware alias cho IsAdmin
         $middleware->alias([
             'is.admin' => \App\Http\Middleware\IsAdmin::class,
         ]);
-        
-        $middleware->prepend(\App\Http\Middleware\CorsMiddleware::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

@@ -86,17 +86,14 @@ const HomePage = () => {
                 <h1 className="title__text">✨ Máy chủ có những gì?</h1>
                 <div className="cards__content">
                     <div className="card">
-                        <div className="card__icon"><img src="/images/icons/perf.svg" alt="Icon" /></div>
                         <h2 className="card__title">🚀 Máy chủ ổn định</h2>
                         <p>Máy chủ được thuê với cấu hình hosting tốt nhất và tối ưu nên đảm bảo được 20 TPS về độ ổn định.</p>
                     </div>
                     <div className="card">
-                        <div className="card__icon"><img src="/images/icons/users.svg" alt="Icon" /></div>
                         <h2 className="card__title">🍾 Có cộng đồng năng động</h2>
                         <p>Một cộng đồng thân thiện mang lại môi trường thoải mái và vui vẻ cho bạn!</p>
                     </div>
                     <div className="card">
-                        <div className="card__icon"><img src="/images/icons/ai.svg" alt="Icon" /></div>
                         <h2 className="card__title">🌆 Máy chủ có sự sáng tạo</h2>
                         <p>Máy chủ có những tính năng và resoucepack mới lạ khiến bạn không cảm giác nhàm chán!</p>
                     </div>
